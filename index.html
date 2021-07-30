@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <header>
+        <h1>Books Shop</h1>
+    </header>
+
+    <section class="page-number">
+        <button onclick="onPrevPage()">◀</button>
+        <span></span>
+        <button onclick="onNextPage()">▶</button>
+    </section>
+
+    <section class="add-book">
+        <span onclick="onAddBook()">create new book</span>
+    </section>
+
+    <section class="msgs"><span>Msgs: </span></section>
+
+    <section class="books-container"></section>
+
+    <div class="modal-container" hidden>
+        <div class="modal">
+            <h2></h2>
+            <h3></h3>
+            <div class="img"></div>
+            <div class="rate"></div>
+            <button onclick="onCloseModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="js/storage.service.js"></script>
+    <script src="js/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>
