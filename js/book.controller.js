@@ -32,7 +32,7 @@ function renderBooks() {
         <th>Id</th>
         <th name="title" onclick="onSetSortBy('name')">Title <span>↕</span></th>
         <th name="price" onclick="onSetSortBy('price')">Price <span>↕</span></th>
-        <th colspan="3">Actions</th>
+        <th>Actions</th>
         </tr>`);
     strHtmls.push(`</tbody></table>`);
     document.querySelector('.books-container').innerHTML = strHtmls.join('')

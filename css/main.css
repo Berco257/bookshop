@@ -73,6 +73,7 @@ table {
     border: 0;
     background: unset;
     margin: 2px;
+    text-overflow: ellipsis;
 }
 
 .book-enabled {
