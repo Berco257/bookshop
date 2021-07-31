@@ -3,12 +3,18 @@
 }
 
 body {
+    width: 100vw;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+}
+
+table {
+    margin: auto;
 }
 
 .add-book,
 .page-number,
-.msgs,
 .books-container table,
 .modal .img,
 .modal .rate {
@@ -17,14 +23,9 @@ body {
 
 .books-container table {
     border-collapse: collapse;
-    min-width: 500px;
 }
 
-.titles-row td {
-    font-weight: bold;
-}
-
-.titles-row td,
+.titles-row th,
 .book-row td {
     border: 1px solid #8f8f8f;
     padding: 5px 8px;
@@ -64,8 +65,8 @@ body {
     color: #78641a;
 }
 
-.msgs span {
-    line-height: 1;
+.msgs td {
+    text-align: left;
 }
 
 .book-disabled {
@@ -125,4 +126,8 @@ body {
 .titles-row [name=title] span,
 .titles-row [name=price] span {
     font: icon;
+}
+
+.actions {
+    white-space: nowrap;
 }

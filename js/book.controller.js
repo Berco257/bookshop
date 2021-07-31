@@ -17,7 +17,7 @@ function renderBooks() {
          disabled class="book-disabled"></td>
         <td><input type="text" value="${book.price}" name="price-${book.id}"
          disabled class="book-disabled"></td>
-        <td>
+        <td class="actions">
         <button onclick="onReadBook(${book.id})">Read</button>
         <button onclick="onUpdateBook(${book.id})">Update</button>
         <button onclick="onRemoveBook(${book.id})">Delete</button>
@@ -27,11 +27,12 @@ function renderBooks() {
     strHtmls.unshift(`
         <table>
         <tbody>
+        <tr class="msgs"><td colspan="4"><span>Msgs: </span></td></tr>
         <tr class="titles-row">
-        <td>Id</td>
-        <td name="title" onclick="onSetSortBy('name')">Title <span>↕</span></td>
-        <td name="price" onclick="onSetSortBy('price')">Price <span>↕</span></td>
-        <td colspan="3">Actions</td>
+        <th>Id</th>
+        <th name="title" onclick="onSetSortBy('name')">Title <span>↕</span></th>
+        <th name="price" onclick="onSetSortBy('price')">Price <span>↕</span></th>
+        <th colspan="3">Actions</th>
         </tr>`);
     strHtmls.push(`</tbody></table>`);
     document.querySelector('.books-container').innerHTML = strHtmls.join('')
@@ -139,7 +140,9 @@ function writeMsg(msg) {
     clearInterval(gMsgInterval);
     var elMsg = document.querySelector('.msgs span');
     elMsg.innerText = `Msgs: ${msg}`;
-    gMsgInterval = setTimeout(function() { elMsg.innerText = 'Msgs: ' }, 4000);
+    gMsgInterval = setTimeout(function() {
+        elMsg.innerText = 'Msgs: '
+    }, 4000);
 }
 
 function onCloseModal() {
