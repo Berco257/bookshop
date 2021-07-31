@@ -70,6 +70,7 @@ table {
 }
 
 .book-disabled {
+    width: 100%;
     border: 0;
     background: unset;
     margin: 2px;
@@ -77,6 +78,7 @@ table {
 }
 
 .book-enabled {
+    width: 100%;
     background-color: #f4feff;
     color: darkgoldenrod;
 }
